@@ -52,4 +52,14 @@ elif float(Hours) < 40:
     GrossPayTax = float(GrossPay) * float(Tax)
     NetPay = float(GrossPay) - float(GrossPayTax)
     print("Your Net Pay is " + "$" +str(NetPay))
-input("Calculations complete, please write these down or just remember them. \n Awaiting input...")
+    CalculateWeeks = input("Would you like to see it multiplied by number of weeks?: ")
+    CalculateWeeks.lower()
+    if CalculateWeeks == "y":
+        CalculateWeekNum = input("How many weeks would you like to calculate?: ")
+        AfterWeeksCalc = float(NetPay) * int(CalculateWeekNum)
+        print(AfterWeeksCalc)
+        print("All calculations complete!\n")
+        input("Awaiting input to close...")
+    else:
+        print("All calculations complete!\n")
+        input("Awaiting input to close...")
